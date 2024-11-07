@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Main container for the To-Do List application -->
+  <div class="todo-container">
+    
+    <!-- Title of the application -->
+    <h1>TODO LIST</h1>
+    
+    <!-- Section for adding new tasks -->
+    <div class="input-group">
+      <!-- Input field for entering a new task -->
+      <input type="text" id="taskInput" placeholder="Type a task">
+      
+      <!-- Button to add the entered task to the list -->
+      <button onclick="addTask()">ADD</button>
+    </div>
+    
+    <!-- Subheading for the tasks section -->
+    <h2>LIST OF TASKS</h2>
+    
+    <!-- Unordered list to display the tasks -->
+    <ul id="taskList"></ul>
+  </div>
+
+  <!-- Container for editing an existing task (initially hidden) -->
+  <div class="edit-container" id="editContainer" style="display:none;">
+    <!-- Heading for the edit section -->
+    <h3>Edit task:</h3>
+    
+    <!-- Input field for modifying the selected task -->
+    <input type="text" id="editInput">
+    
+    <!-- Buttons to submit or cancel the edit action -->
+    <div class="edit-buttons">
+      <button onclick="submitEdit()">SUBMIT</button>
+      <button onclick="cancelEdit()">CANCEL</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
